@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#e7eaf3">
+  <meta name="description" content="Five thoughtful trivia questions, one new puzzle every UTC day.">
+  <title>Daily Five — Two minutes of trivia</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="site-header">
+      <div class="brand-mark" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+      <div class="heading"><p class="eyebrow">A little knowledge, every day</p><h1>Daily Five</h1></div>
+      <span id="puzzle-number" class="puzzle-number"></span>
+    </header>
+    <div class="accent-rule" aria-hidden="true"></div>
+    <section class="game-panel" aria-label="Daily trivia game">
+      <div class="progress-heading"><span>YOUR FIVE</span><span>ONE NEW SET DAILY</span></div>
+      <div id="progress" class="progress" aria-label="Progress through five questions"></div>
+      <section id="question-screen" aria-labelledby="question">
+        <div class="question-meta"><span id="category" class="category"></span><span id="round-label"></span></div>
+        <h2 id="question"></h2>
+        <div id="options" class="options" role="group" aria-label="Choose an answer"></div>
+        <p id="feedback" class="feedback" aria-live="polite" hidden></p>
+        <button id="next" class="primary-button" type="button" hidden>Next question</button>
+        <p class="keyboard-hint">Tip: press 1–4 to answer · Enter to continue</p>
+      </section>
+      <section id="results-screen" aria-labelledby="results-heading" hidden>
+        <div class="results-intro"><p class="eyebrow">TODAY'S RESULT</p><h2 id="results-heading">Your Daily Five</h2>
+          <div id="final-score" class="final-score"></div><p id="score-message" class="score-message"></p>
+          <button type="button" id="copy" class="primary-button">Copy result <span aria-hidden="true">↗</span></button>
+          <p id="copy-status" class="copy-status" role="status" aria-live="polite"></p></div>
+        <h3 class="section-heading">Your answers</h3><ol id="review" class="review"></ol>
+        <h3 class="section-heading">Your stats</h3>
+        <div class="stats"><div><strong id="stat-played">0</strong><span>Played</span></div><div><strong id="stat-streak">0</strong><span>Streak</span></div><div><strong id="stat-best">0</strong><span>Best</span></div><div><strong id="stat-correct">0</strong><span>Correct</span></div></div>
+        <div class="next-up"><span>Next five in</span><strong id="countdown">--:--:--</strong><small>Resets at midnight UTC</small></div>
+      </section>
+    </section>
+    <footer>Five questions. Ten categories. A fresh perspective every day.</footer>
+  </main>
+  <script src="data/science.js"></script>
+  <script src="data/geography.js"></script>
+  <script src="data/history.js"></script>
+  <script src="data/culture.js"></script>
+  <script src="data/nature.js"></script>
+  <script src="data/tech.js"></script>
+  <script src="data/food.js"></script>
+  <script src="data/sport.js"></script>
+  <script src="data/music.js"></script>
+  <script src="data/caribbean.js"></script>
+  <script src="js/rng.js"></script>
+  <script src="js/game.js"></script>
+</body>
+</html>
